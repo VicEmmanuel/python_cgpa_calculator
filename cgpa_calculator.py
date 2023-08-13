@@ -6,17 +6,14 @@ def calculate_gpa(grades, course_credits):
         'D': 2.0,
         'F': 0.0
     }
-
     total_credits = 0
     total_grade_points = 0
-
     for course, grade in grades.items():
         credit_hours = course_credits.get(course, 0)
         total_credits += credit_hours
         total_grade_points += grade_points.get(grade, 0) * credit_hours
 
     return total_grade_points / total_credits if total_credits != 0 else 0.0
-
 def main():
     course_credits = {
         'MATH 202': 3,
@@ -28,8 +25,6 @@ def main():
         'IFT 206': 3,
         'CYB 202': 2
     }
-
-
     print("")
     print("Students GPA Calcluator") 
     print("==========================================")
